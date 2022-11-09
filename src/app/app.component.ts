@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Card-Tracker';
   cards: any;
+  cardToDisplay: number = 0;
 
   constructor(public http: HttpClient) {
     this.http
@@ -19,5 +20,9 @@ export class AppComponent {
   }
   findCard() {
     console.log(this.cards.data[0].images.small);
+  }
+
+  cardIndex() {
+    return this.cardToDisplay;
   }
 }
