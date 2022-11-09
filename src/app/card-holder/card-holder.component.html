@@ -1,0 +1,7 @@
+<div (click)="showLargeCard()" class="card-holder">
+  <img src="{{ largeCard }}" />
+  <button mat-raised-button (click)="this.postService.getPosts()">
+    Get Eevee Card
+  </button>
+  <img [src]="this.postService.cards.data[cardIndex()].images.small" />
+</div>
