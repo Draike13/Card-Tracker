@@ -1,8 +1,26 @@
-.card-holder{
-display: flex;
+.card-holder {
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 16px;
   padding: 16px;
   border-radius: 8px;
+}
+
+.tab-header {
+  background-color: black;
+}
+
+mat-card {
+  display: flex;
+  justify-content: center;
+  float: left;
+  width: 258px;
+  height: 358px;
+  padding: 8px;
+  margin: 8px;
+}
+img {
+  max-width: 250px;
+  max-height: 400px;
 }

@@ -1,14 +1,57 @@
-<mat-tab-group mat-align-tabs="start">
+<mat-tab-group class="tab-header" mat-align-tabs="start">
+
   <mat-tab label="Eevee Cards">
-    <img *ngFor="let eeveeImage of eeveeImages" [src]="eeveeImage" />
+    <mat-card *ngFor="let eeveeImage of eeveeImages">
+      <img [src]="eeveeImage" />
+    </mat-card>
   </mat-tab>
+
   <mat-tab label="Sylveon Cards">
-    <img *ngFor="let sylveonImage of sylveonImages" [src]="sylveonImage" />
+    <mat-card *ngFor="let sylveonImage of sylveonImages">
+      <img [src]="sylveonImage" />
+    </mat-card>
   </mat-tab>
+
   <mat-tab label="Espeon Cards">
-    <img *ngFor="let espeonImage of espeonImages" [src]="espeonImage" />
+    <mat-card *ngFor="let espeonImage of espeonImages">
+      <img [src]="espeonImage" />
+    </mat-card>
   </mat-tab>
+
   <mat-tab label="Umbreon Cards">
-    <img *ngFor="let umbreonImage of umbreonImages" [src]="umbreonImage" />
+    <mat-card *ngFor="let umbreonImage of umbreonImages">
+      <img [src]="umbreonImage" />
+    </mat-card>
   </mat-tab>
+
+  <mat-tab label="Leafeon Cards">
+    <mat-card *ngFor="let leafeonImage of leafeonImages">
+      <img [src]="leafeonImage" />
+    </mat-card>
+  </mat-tab>
+
+  <mat-tab label="Glaceon Cards">
+  <mat-card *ngFor="let glaceonImage of glaceonImages">
+    <img [src]="glaceonImage" />
+  </mat-card>
+  </mat-tab>
+
+  <mat-tab label="Vaporeon Cards">
+  <mat-card *ngFor="let vaporeonImage of vaporeonImages">
+    <img [src]="vaporeonImage" />
+  </mat-card>
+  </mat-tab>
+
+  <mat-tab label="Flareon Cards">
+    <mat-card *ngFor="let flareonImage of flareonImages">
+      <img [src]="flareonImage" />
+    </mat-card>
+  </mat-tab>
+
+  <mat-tab label="Jolteon Cards">
+  <mat-card *ngFor="let jolteonImage of jolteonImages">
+    <img [src]="jolteonImage" />
+  </mat-card>
+  </mat-tab>
+
 </mat-tab-group>

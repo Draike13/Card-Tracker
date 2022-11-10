@@ -36,39 +36,7 @@ export class PostService {
 
   constructor(public httpClient: HttpClient) {}
 
-  getEeveePosts() {
-    return this.httpClient.get(this.eeveeUrl);
-  }
-
-  getSylveonPosts() {
-    return this.httpClient.get(this.sylveonUrl);
-  }
-
-  getEspeonPosts() {
-    return this.httpClient.get(this.espeonUrl);
-  }
-
-  getUmbreonPosts() {
-    return this.httpClient.get(this.umbreonUrl);
-  }
-
-  getLeafeonPosts() {
-    return this.httpClient.get(this.leafeonUrl);
-  }
-
-  getGlaceonPosts() {
-    return this.httpClient.get(this.glaceonUrl);
-  }
-
-  getVaporeonPosts() {
-    return this.httpClient.get(this.vaporeonUrl);
-  }
-
-  getFlareonPosts() {
-    return this.httpClient.get(this.flareonUrl);
-  }
-
-  getJolteonPosts() {
-    return this.httpClient.get(this.jolteonUrl);
+  getPosts(url: string) {
+    return this.httpClient.get(url);
   }
 }
