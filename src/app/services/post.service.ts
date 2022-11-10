@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root',
@@ -36,56 +37,38 @@ export class PostService {
   constructor(public httpClient: HttpClient) {}
 
   getEeveePosts() {
-    return this.httpClient
-      .get(this.eeveeUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.eeveeUrl);
   }
 
   getSylveonPosts() {
-    return this.httpClient
-      .get(this.sylveonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.sylveonUrl);
   }
 
   getEspeonPosts() {
-    return this.httpClient
-      .get(this.espeonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.espeonUrl);
   }
 
   getUmbreonPosts() {
-    return this.httpClient
-      .get(this.umbreonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.umbreonUrl);
   }
 
   getLeafeonPosts() {
-    return this.httpClient
-      .get(this.leafeonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.leafeonUrl);
   }
 
   getGlaceonPosts() {
-    return this.httpClient
-      .get(this.glaceonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.glaceonUrl);
   }
 
   getVaporeonPosts() {
-    return this.httpClient
-      .get(this.vaporeonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.vaporeonUrl);
   }
 
   getFlareonPosts() {
-    return this.httpClient
-      .get(this.flareonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.flareonUrl);
   }
 
   getJolteonPosts() {
-    return this.httpClient
-      .get(this.jolteonUrl)
-      .subscribe((cards) => (this.cards = cards));
+    return this.httpClient.get(this.jolteonUrl);
   }
 }

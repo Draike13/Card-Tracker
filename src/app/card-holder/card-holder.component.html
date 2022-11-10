@@ -1,98 +1,14 @@
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getEeveePosts()"
-  >
-    Get Eevee Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getSylveonPosts()"
-  >
-    Get Sylveon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getEspeonPosts()"
-  >
-    Get Espeon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getUmbreonPosts()"
-  >
-    Get Umbreon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getLeafeonPosts()"
-  >
-    Get Leafeon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getGlaceonPosts()"
-  >
-    Get Glaceon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getVaporeonPosts()"
-  >
-    Get Vaporeon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getFlareonPosts()"
-  >
-    Get Flareon Card
-  </button>
-</div>
-
-<div class="card-holder">
-  <button
-    class="get-card-button"
-    mat-raised-button
-    (click)="this.postService.getJolteonPosts()"
-  >
-    Get Jolteon Card
-  </button>
-</div>
-<div class="image-holder">
-  <img
-    (click)="showLargeCard()"
-    [src]="this.postService.cards.data[cardIndex()].images.small"
-  />
-</div>
-<div>
-  <img src="{{ largeCard }}" />
-</div>
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Eevee Cards">
+    <img *ngFor="let eeveeImage of eeveeImages" [src]="eeveeImage" />
+  </mat-tab>
+  <mat-tab label="Sylveon Cards">
+    <img *ngFor="let sylveonImage of sylveonImages" [src]="sylveonImage" />
+  </mat-tab>
+  <mat-tab label="Espeon Cards">
+    <img *ngFor="let espeonImage of espeonImages" [src]="espeonImage" />
+  </mat-tab>
+  <mat-tab label="Umbreon Cards">
+    <img *ngFor="let umbreonImage of umbreonImages" [src]="umbreonImage" />
+  </mat-tab>
+</mat-tab-group>

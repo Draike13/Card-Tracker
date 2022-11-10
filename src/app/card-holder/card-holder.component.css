@@ -1,7 +1,8 @@
-.card-holder:hover {
-  cursor: pointer;
-}
-
-.get-card-button {
-  margin: 8px;
+.card-holder{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
 }
