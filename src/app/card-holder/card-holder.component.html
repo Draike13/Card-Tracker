@@ -1,7 +1,98 @@
-<div (click)="showLargeCard()" class="card-holder">
-  <img src="{{ largeCard }}" />
-  <button mat-raised-button (click)="this.postService.getPosts()">
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getEeveePosts()"
+  >
     Get Eevee Card
   </button>
-  <img [src]="this.postService.cards.data[cardIndex()].images.small" />
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getSylveonPosts()"
+  >
+    Get Sylveon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getEspeonPosts()"
+  >
+    Get Espeon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getUmbreonPosts()"
+  >
+    Get Umbreon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getLeafeonPosts()"
+  >
+    Get Leafeon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getGlaceonPosts()"
+  >
+    Get Glaceon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getVaporeonPosts()"
+  >
+    Get Vaporeon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getFlareonPosts()"
+  >
+    Get Flareon Card
+  </button>
+</div>
+
+<div class="card-holder">
+  <button
+    class="get-card-button"
+    mat-raised-button
+    (click)="this.postService.getJolteonPosts()"
+  >
+    Get Jolteon Card
+  </button>
+</div>
+<div class="image-holder">
+  <img
+    (click)="showLargeCard()"
+    [src]="this.postService.cards.data[cardIndex()].images.small"
+  />
+</div>
+<div>
+  <img src="{{ largeCard }}" />
 </div>

@@ -1,3 +1,7 @@
 .card-holder:hover {
   cursor: pointer;
 }
+
+.get-card-button {
+  margin: 8px;
+}
