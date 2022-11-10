@@ -1,20 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  selector: 'app-umbreon-card',
+  templateUrl: './umbreon-card.component.html',
+  styleUrls: ['./umbreon-card.component.css'],
 })
-export class CardComponent implements OnInit {
+export class UmbreonCardComponent implements OnInit {
   isVisited: boolean = false;
 
-  @Input() eeveeImage: string = '';
+  @Input() umbreonImage: string = '';
   @Input() i: any = '';
 
   constructor() {}
 
   ngOnInit(): void {}
-
   makeGrayscale(index: number) {
     this.isVisited = !this.isVisited;
   }

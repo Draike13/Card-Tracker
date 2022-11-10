@@ -12,10 +12,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { NgStyle } from '@angular/common';
-import { CardComponent } from './card/card.component';
+import { EeveeCardComponent } from './cards/eevee-card/eevee-card.component';
+import { SylveonCardComponent } from './cards/sylveon-card/sylveon-card.component';
+import { EspeonCardComponent } from './cards/espeon-card/espeon-card.component';
+import { UmbreonCardComponent } from './cards/umbreon-card/umbreon-card.component';
 
 @NgModule({
-  declarations: [AppComponent, CardHolderComponent, HeaderComponent, CardComponent],
+  declarations: [
+    AppComponent,
+    CardHolderComponent,
+    HeaderComponent,
+    EeveeCardComponent,
+    SylveonCardComponent,
+    EspeonCardComponent,
+    UmbreonCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

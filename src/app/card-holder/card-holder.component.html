@@ -1,35 +1,40 @@
 <mat-tab-group class="tab-header" mat-align-tabs="start">
   <mat-tab label="Eevee Cards">
-    <!-- <mat-card *ngFor="let eeveeImage of eeveeImages; let i = index">
-      <img
-        [class.visited]="isVisited === true"
-        (click)="makeGrayscale(i)"
-        [src]="eeveeImage"
-      />
-    </mat-card> -->
-    <app-card
+    <app-eevee-card
       *ngFor="let eeveeImage of eeveeImages; let i = index"
       [eeveeImage]="eeveeImage"
       [i]="i"
-    ></app-card>
+    ></app-eevee-card>
   </mat-tab>
 
   <mat-tab label="Sylveon Cards">
-    <mat-card *ngFor="let sylveonImage of sylveonImages">
+    <app-sylveon-card
+      *ngFor="let sylveonImage of sylveonImages; let i = index"
+      [sylveonImage]="sylveonImage"
+      [i]="i"
+    >
       <img [src]="sylveonImage" />
-    </mat-card>
+    </app-sylveon-card>
   </mat-tab>
 
   <mat-tab label="Espeon Cards">
-    <mat-card *ngFor="let espeonImage of espeonImages">
+    <app-espeon-card
+      *ngFor="let espeonImage of espeonImages; let i = index"
+      [espeonImage]="espeonImage"
+      [i]="i"
+    >
       <img [src]="espeonImage" />
-    </mat-card>
+    </app-espeon-card>
   </mat-tab>
 
   <mat-tab label="Umbreon Cards">
-    <mat-card *ngFor="let umbreonImage of umbreonImages">
+    <app-umbreon-card
+      *ngFor="let umbreonImage of umbreonImages; let i = index"
+      [umbreonImage]="umbreonImage"
+      [i]="i"
+    >
       <img [src]="umbreonImage" />
-    </mat-card>
+    </app-umbreon-card>
   </mat-tab>
 
   <mat-tab label="Leafeon Cards">
