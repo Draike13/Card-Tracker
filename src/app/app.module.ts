@@ -11,9 +11,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { NgStyle } from '@angular/common';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, CardHolderComponent, HeaderComponent],
+  declarations: [AppComponent, CardHolderComponent, HeaderComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,6 +26,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatTabsModule,
     MatCardModule,
+    NgStyle,
   ],
   providers: [],
   bootstrap: [AppComponent],

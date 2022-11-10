@@ -1,9 +1,17 @@
 <mat-tab-group class="tab-header" mat-align-tabs="start">
-
   <mat-tab label="Eevee Cards">
-    <mat-card *ngFor="let eeveeImage of eeveeImages">
-      <img [src]="eeveeImage" />
-    </mat-card>
+    <!-- <mat-card *ngFor="let eeveeImage of eeveeImages; let i = index">
+      <img
+        [class.visited]="isVisited === true"
+        (click)="makeGrayscale(i)"
+        [src]="eeveeImage"
+      />
+    </mat-card> -->
+    <app-card
+      *ngFor="let eeveeImage of eeveeImages; let i = index"
+      [eeveeImage]="eeveeImage"
+      [i]="i"
+    ></app-card>
   </mat-tab>
 
   <mat-tab label="Sylveon Cards">
@@ -31,15 +39,15 @@
   </mat-tab>
 
   <mat-tab label="Glaceon Cards">
-  <mat-card *ngFor="let glaceonImage of glaceonImages">
-    <img [src]="glaceonImage" />
-  </mat-card>
+    <mat-card *ngFor="let glaceonImage of glaceonImages">
+      <img [src]="glaceonImage" />
+    </mat-card>
   </mat-tab>
 
   <mat-tab label="Vaporeon Cards">
-  <mat-card *ngFor="let vaporeonImage of vaporeonImages">
-    <img [src]="vaporeonImage" />
-  </mat-card>
+    <mat-card *ngFor="let vaporeonImage of vaporeonImages">
+      <img [src]="vaporeonImage" />
+    </mat-card>
   </mat-tab>
 
   <mat-tab label="Flareon Cards">
@@ -49,9 +57,8 @@
   </mat-tab>
 
   <mat-tab label="Jolteon Cards">
-  <mat-card *ngFor="let jolteonImage of jolteonImages">
-    <img [src]="jolteonImage" />
-  </mat-card>
+    <mat-card *ngFor="let jolteonImage of jolteonImages">
+      <img [src]="jolteonImage" />
+    </mat-card>
   </mat-tab>
-
 </mat-tab-group>
