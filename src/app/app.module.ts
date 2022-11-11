@@ -21,6 +21,8 @@ import { GlaceonCardComponent } from './cards/glaceon-card/glaceon-card.componen
 import { VaporeonCardComponent } from './cards/vaporeon-card/vaporeon-card.component';
 import { FlareonCardComponent } from './cards/flareon-card/flareon-card.component';
 import { JolteonCardComponent } from './cards/jolteon-card/jolteon-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogLargeCardComponent } from './dialog-large-card/dialog-large-card.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { JolteonCardComponent } from './cards/jolteon-card/jolteon-card.componen
     VaporeonCardComponent,
     FlareonCardComponent,
     JolteonCardComponent,
+    DialogLargeCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import { JolteonCardComponent } from './cards/jolteon-card/jolteon-card.componen
     MatTabsModule,
     MatCardModule,
     NgStyle,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

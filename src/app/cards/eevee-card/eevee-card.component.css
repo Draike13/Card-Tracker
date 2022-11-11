@@ -14,3 +14,8 @@ img {
   max-width: 250px;
   max-height: 400px;
 }
+
+.zoom-button {
+  display: flex;
+  margin-top: 358px;
+}
