@@ -14,7 +14,7 @@ export class UmbreonCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  makeGrayscale(index: number) {
+  makeGrayscale() {
     this.isVisited = !this.isVisited;
   }
 }

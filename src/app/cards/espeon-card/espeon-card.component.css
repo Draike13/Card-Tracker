@@ -7,7 +7,7 @@ mat-card {
   flex-direction: column;
   float: left;
   width: 258px;
-  height: auto;
+  height: 375px;
   padding: 12px;
   margin: 8px;
 }

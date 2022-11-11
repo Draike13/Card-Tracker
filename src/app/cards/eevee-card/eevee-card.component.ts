@@ -1,7 +1,5 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Data } from '@angular/router';
 import { DialogLargeCardComponent } from 'src/app/dialog-large-card/dialog-large-card.component';
 
 @Component({

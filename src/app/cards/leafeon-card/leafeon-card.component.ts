@@ -14,7 +14,7 @@ export class LeafeonCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  makeGrayscale(index: number) {
+  makeGrayscale() {
     this.isVisited = !this.isVisited;
   }
 }

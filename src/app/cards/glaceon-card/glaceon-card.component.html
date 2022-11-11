@@ -1,7 +1,18 @@
 <mat-card>
-  <img
-    [class.visited]="isVisited === true"
-    (click)="makeGrayscale(i)"
-    [src]="glaceonImage"
-  />
+  <mat-card-content>
+    <img
+      [class.visited]="isVisited === true"
+      (click)="makeGrayscale()"
+      [src]="glaceonImage.small"
+    />
+  </mat-card-content>
+  <mat-card-actions class="button-holder">
+    <button
+      mat-raised-button
+      class="zoom-button"
+      (click)="openLargeCard(glaceonImage.large)"
+    >
+      Enlarge Card
+    </button>
+  </mat-card-actions>
 </mat-card>
