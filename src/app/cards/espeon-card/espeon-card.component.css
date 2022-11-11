@@ -3,19 +3,37 @@
 }
 mat-card {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   float: left;
   width: 258px;
   height: auto;
-  padding: 8px;
+  padding: 12px;
   margin: 8px;
 }
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  margin-top: 4px;
+  padding: 0px;
+}
+
 img {
-  max-width: 250px;
+  max-width: 258px;
   max-height: auto;
 }
 
 .button-holder {
-  height: 24px;
   display: flex;
-  float: left;
+  height: 30px;
+  width: 200px;
+  padding-left: 29px;
+}
+.zoom-button {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  background-color: black;
+  color: white;
 }
