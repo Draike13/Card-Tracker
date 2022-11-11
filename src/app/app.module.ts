@@ -23,6 +23,10 @@ import { FlareonCardComponent } from './cards/flareon-card/flareon-card.componen
 import { JolteonCardComponent } from './cards/jolteon-card/jolteon-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogLargeCardComponent } from './dialog-large-card/dialog-large-card.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,9 @@ import { DialogLargeCardComponent } from './dialog-large-card/dialog-large-card.
     MatCardModule,
     NgStyle,
     MatDialogModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent],
