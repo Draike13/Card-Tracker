@@ -14,7 +14,7 @@ export class FlareonCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  makeGrayscale(index: number) {
+  makeGrayscale() {
     this.isVisited = !this.isVisited;
   }
 }

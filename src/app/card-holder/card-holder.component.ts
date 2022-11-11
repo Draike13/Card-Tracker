@@ -25,7 +25,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.eeveeUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.eeveeImages = cards;
       });
@@ -34,7 +34,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.sylveonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.sylveonImages = cards;
       });
@@ -43,7 +43,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.espeonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.espeonImages = cards;
       });
@@ -52,7 +52,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.umbreonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.umbreonImages = cards;
       });
@@ -61,7 +61,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.leafeonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.leafeonImages = cards;
       });
@@ -70,7 +70,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.glaceonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.glaceonImages = cards;
       });
@@ -79,7 +79,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.vaporeonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.vaporeonImages = cards;
       });
@@ -88,7 +88,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.flareonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.flareonImages = cards;
       });
@@ -97,7 +97,7 @@ export class CardHolderComponent implements OnInit {
       .getPosts(this.postService.jolteonUrl)
       .subscribe((response: any) => {
         const cards = response.data.map((card: any) => {
-          return card.images.small;
+          return card.images;
         });
         this.jolteonImages = cards;
       });

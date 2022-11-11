@@ -12,7 +12,7 @@ import { DialogLargeCardComponent } from 'src/app/dialog-large-card/dialog-large
 export class EeveeCardComponent implements OnInit {
   isVisited: boolean = false;
 
-  @Input() eeveeImage: string = '';
+  @Input() eeveeImage: any = '';
   @Input() i: any = '';
   @Input() id: string = '';
 
@@ -20,11 +20,11 @@ export class EeveeCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  makeGrayscale(index: number) {
+  makeGrayscale() {
     this.isVisited = !this.isVisited;
   }
 
-  openLargeCard(index: number) {
-    this.dialog.open(DialogLargeCardComponent, { data: index });
+  openLargeCard(image: string) {
+    this.dialog.open(DialogLargeCardComponent, { data: image });
   }
 }

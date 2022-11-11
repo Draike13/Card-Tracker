@@ -1,7 +1,14 @@
 <mat-card>
-  <img
-    [class.visited]="isVisited === true"
-    (click)="makeGrayscale(i)"
-    [src]="espeonImage"
-  />
+  <mat-card-content>
+    <img
+      [class.visited]="isVisited === true"
+      (click)="makeGrayscale()"
+      [src]="espeonImage.small"
+    />
+  </mat-card-content>
+  <mat-card-actions class="button-holder">
+    <button class="zoom-button" (click)="openLargeCard(espeonImage.large)">
+      Zoom
+    </button>
+  </mat-card-actions>
 </mat-card>
