@@ -1,8 +1,16 @@
 <mat-card>
-  <!-- <label class="zoom-button" (click)="openLargeCard()">Zoom</label> -->
-  <img
-    [class.visited]="isVisited === true"
-    (click)="makeGrayscale(i)"
-    [src]="eeveeImage"
-  />
+  <mat-card-content>
+    <div>
+      <img
+        [class.visited]="isVisited === true"
+        (click)="makeGrayscale(i)"
+        [src]="eeveeImage"
+      />
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="button-holder">
+    <div>
+      <button class="zoom-button" (click)="openLargeCard(i)">Zoom</button>
+    </div>
+  </mat-card-actions>
 </mat-card>

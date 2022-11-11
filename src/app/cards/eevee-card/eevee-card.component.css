@@ -3,19 +3,19 @@
 }
 mat-card {
   display: flex;
-  justify-content: center;
   float: left;
   width: 258px;
-  height: 358px;
+  height: auto;
   padding: 8px;
   margin: 8px;
 }
 img {
   max-width: 250px;
-  max-height: 400px;
+  max-height: auto;
 }
 
-.zoom-button {
+.button-holder {
+  height: 24px;
   display: flex;
-  margin-top: 358px;
+  float: left;
 }
