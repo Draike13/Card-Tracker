@@ -16,6 +16,11 @@ import { EeveeCardComponent } from './cards/eevee-card/eevee-card.component';
 import { SylveonCardComponent } from './cards/sylveon-card/sylveon-card.component';
 import { EspeonCardComponent } from './cards/espeon-card/espeon-card.component';
 import { UmbreonCardComponent } from './cards/umbreon-card/umbreon-card.component';
+import { LeafeonCardComponent } from './cards/leafeon-card/leafeon-card.component';
+import { GlaceonCardComponent } from './cards/glaceon-card/glaceon-card.component';
+import { VaporeonCardComponent } from './cards/vaporeon-card/vaporeon-card.component';
+import { FlareonCardComponent } from './cards/flareon-card/flareon-card.component';
+import { JolteonCardComponent } from './cards/jolteon-card/jolteon-card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import { UmbreonCardComponent } from './cards/umbreon-card/umbreon-card.componen
     SylveonCardComponent,
     EspeonCardComponent,
     UmbreonCardComponent,
+    LeafeonCardComponent,
+    GlaceonCardComponent,
+    VaporeonCardComponent,
+    FlareonCardComponent,
+    JolteonCardComponent,
   ],
   imports: [
     BrowserModule,

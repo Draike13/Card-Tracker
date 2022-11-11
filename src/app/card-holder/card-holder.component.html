@@ -38,32 +38,52 @@
   </mat-tab>
 
   <mat-tab label="Leafeon Cards">
-    <mat-card *ngFor="let leafeonImage of leafeonImages">
+    <app-leafeon-card
+      *ngFor="let leafeonImage of leafeonImages; let i = index"
+      [leafeonImage]="leafeonImage"
+      [i]="i"
+    >
       <img [src]="leafeonImage" />
-    </mat-card>
+    </app-leafeon-card>
   </mat-tab>
 
   <mat-tab label="Glaceon Cards">
-    <mat-card *ngFor="let glaceonImage of glaceonImages">
+    <app-glaceon-card
+      *ngFor="let glaceonImage of glaceonImages; let i = index"
+      [glaceonImage]="glaceonImage"
+      [i]="i"
+    >
       <img [src]="glaceonImage" />
-    </mat-card>
+    </app-glaceon-card>
   </mat-tab>
 
   <mat-tab label="Vaporeon Cards">
-    <mat-card *ngFor="let vaporeonImage of vaporeonImages">
+    <app-vaporeon-card
+      *ngFor="let vaporeonImage of vaporeonImages; let i = index"
+      [vaporeonImage]="vaporeonImage"
+      [i]="i"
+    >
       <img [src]="vaporeonImage" />
-    </mat-card>
+    </app-vaporeon-card>
   </mat-tab>
 
   <mat-tab label="Flareon Cards">
-    <mat-card *ngFor="let flareonImage of flareonImages">
+    <app-flareon-card
+      *ngFor="let flareonImage of flareonImages; let i = index"
+      [flareonImage]="flareonImage"
+      [i]="i"
+    >
       <img [src]="flareonImage" />
-    </mat-card>
+    </app-flareon-card>
   </mat-tab>
 
   <mat-tab label="Jolteon Cards">
-    <mat-card *ngFor="let jolteonImage of jolteonImages">
+    <app-jolteon-card
+      *ngFor="let jolteonImage of jolteonImages; let i = index"
+      [jolteonImage]="jolteonImage"
+      [i]="i"
+    >
       <img [src]="jolteonImage" />
-    </mat-card>
+    </app-jolteon-card>
   </mat-tab>
 </mat-tab-group>
