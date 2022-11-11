@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "eevee-card-tracker": {
-      "hosting": {
-        "Card-Tracker": [
-          "eevee-card-tracker"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "eevee-card-tracker"
   }
