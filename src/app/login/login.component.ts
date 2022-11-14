@@ -30,6 +30,6 @@ export class LoginComponent implements OnInit {
     let password: any = this.loginForm.get('password')?.value;
     this.authenicationService
       .login(username, password)
-      .subscribe(() => this.router.navigateByUrl('/'));
+      .subscribe(() => this.router.navigateByUrl(''));
   }
 }
