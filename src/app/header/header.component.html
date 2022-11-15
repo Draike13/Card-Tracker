@@ -3,19 +3,19 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
+    <button (click)="reloadPage()" mat-menu-item>
       <mat-icon>refresh</mat-icon>
-      <span>Reload Page</span>
+      <span>Reset</span>
     </button>
-    <button mat-menu-item *ngIf="isLoggedIn === false; disabled">
-      <mat-icon>save</mat-icon>
+    <button mat-menu-item *ngIf="isLoggedIn">
+      <mat-icon (click)="saveList()">save</mat-icon>
       <span>Save</span>
     </button>
-    <button (click)="loginDialog()" mat-menu-item *ngIf="isLoggedIn === false">
+    <button (click)="loginDialog()" mat-menu-item *ngIf="!isLoggedIn">
       <mat-icon>check_box</mat-icon>
       <span>Login</span>
     </button>
-    <button (click)="logOut()" mat-menu-item>
+    <button (click)="logOut()" mat-menu-item *ngIf="isLoggedIn">
       <mat-icon>check_box_outline_blank</mat-icon>
       <span>Logout</span>
     </button>

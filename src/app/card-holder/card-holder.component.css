@@ -24,7 +24,3 @@ img {
   max-width: 250px;
   max-height: 400px;
 }
-
-.eevee-card-test-filter {
-  filter: grayscale(1);
-}
