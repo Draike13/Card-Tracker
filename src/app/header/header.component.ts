@@ -36,6 +36,6 @@ export class HeaderComponent implements OnInit {
     window.location.reload();
   }
   saveList() {
-    localStorage.setItem('savedCards', JSON.stringify(EeveeCardComponent));
+    localStorage.setItem('testing', 'test');
   }
 }

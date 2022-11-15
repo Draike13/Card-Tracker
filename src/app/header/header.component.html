@@ -7,8 +7,8 @@
       <mat-icon>refresh</mat-icon>
       <span>Reset</span>
     </button>
-    <button mat-menu-item *ngIf="isLoggedIn">
-      <mat-icon (click)="saveList()">save</mat-icon>
+    <button (click)="saveList()" mat-menu-item *ngIf="isLoggedIn">
+      <mat-icon>save</mat-icon>
       <span>Save</span>
     </button>
     <button (click)="loginDialog()" mat-menu-item *ngIf="!isLoggedIn">

@@ -18,8 +18,12 @@ export class EeveeCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  makeGrayscale() {
+  makeGrayscale(index: number) {
     this.isVisited = !this.isVisited;
+    localStorage.setItem(
+      JSON.stringify('eevee' + index),
+      JSON.stringify([this.isVisited])
+    );
   }
 
   openLargeCard(image: string) {

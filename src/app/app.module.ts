@@ -22,7 +22,8 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 import { MatMenuModule } from '@angular/material/menu';
 import { DialogLoginComponent } from './dialog-login/dialog-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     provideStorage(() => getStorage()),
     MatMenuModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
