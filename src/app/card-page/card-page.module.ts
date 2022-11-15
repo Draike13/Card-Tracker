@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardHolderComponent } from '../card-holder/card-holder.component';
+import { CardHolderComponent } from './card-holder/card-holder.component';
 import { CardPageRoutingModule } from './card-page-routing.module';
 import { CardPageComponent } from './card-page.component';
 import { EeveeCardComponent } from '../cards/eevee-card/eevee-card.component';
