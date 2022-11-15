@@ -13,6 +13,11 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+  {
+    path: 'cardpage',
+    loadChildren: () =>
+      import('./card-page/card-page.module').then((m) => m.CardPageModule),
     canActivate: [AuthenticationGuard],
   },
 ];

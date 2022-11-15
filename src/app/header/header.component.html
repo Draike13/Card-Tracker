@@ -1,6 +1,24 @@
 <mat-toolbar class="header">
-  <button mat-icon-button class="menu-button">
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
     <mat-icon>menu</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>refresh</mat-icon>
+      <span>Reload Page</span>
+    </button>
+    <button mat-menu-item *ngIf="isLoggedIn === false; disabled">
+      <mat-icon>save</mat-icon>
+      <span>Save</span>
+    </button>
+    <button (click)="loginDialog()" mat-menu-item *ngIf="isLoggedIn === false">
+      <mat-icon>check_box</mat-icon>
+      <span>Login</span>
+    </button>
+    <button (click)="logOut()" mat-menu-item>
+      <mat-icon>check_box_outline_blank</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
   <h1>Eeveelution Card List</h1>
 </mat-toolbar>
