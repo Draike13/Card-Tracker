@@ -1,0 +1,11 @@
+body {
+  background-color: black !important;
+}
+mat-card {
+  margin-top: 128px;
+  max-width: 600px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
