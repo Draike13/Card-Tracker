@@ -21,13 +21,10 @@
   </form>
 
   <div mat-dialog-actions>
-    <button
-      mat-raised-button
-      (click)="login()"
-      type="submit"
-      mat-dialog-close=""
-    >
+    <button mat-raised-button (click)="login()" type="submit" mat-dialog-close>
       Log In
     </button>
   </div>
+
+  <asl-google-signin-button></asl-google-signin-button>
 </div>

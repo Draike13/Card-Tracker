@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogLoginComponent } from '../dialog-login/dialog-login.component';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
-import { EeveeCardComponent } from '../cards/eevee-card/eevee-card.component';
 
 @Component({
   selector: 'app-header',

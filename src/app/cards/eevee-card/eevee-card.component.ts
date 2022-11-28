@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { jsonEval } from '@firebase/util';
 import { DialogLargeCardComponent } from 'src/app/dialog-large-card/dialog-large-card.component';
 
 @Component({
@@ -21,7 +22,7 @@ export class EeveeCardComponent implements OnInit {
   makeGrayscale(index: number) {
     this.isVisited = !this.isVisited;
     localStorage.setItem(
-      JSON.stringify('eevee' + index),
+      JSON.stringify(index),
       JSON.stringify([this.isVisited])
     );
   }

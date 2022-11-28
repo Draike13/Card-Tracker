@@ -24,6 +24,14 @@ import { DialogLoginComponent } from './dialog-login/dialog-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { RouterModule } from '@angular/router';
+import { CardPageComponent } from './card-page/card-page.component';
+import { AuthenticationGuard } from './authentication-guard.guard';
+import {
+  GoogleLoginProvider,
+  SocialAuthServiceConfig,
+  SocialLoginModule,
+} from '@abacritt/angularx-social-login';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +42,16 @@ import { MatInputModule } from '@angular/material/input';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([
+      { path: 'login', component: DialogLoginComponent },
+      {
+        path: 'mainpage',
+        component: CardPageComponent,
+        canActivate: [AuthenticationGuard],
+      },
+      { path: '**', component: DialogLoginComponent },
+    ]),
+    SocialLoginModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -52,7 +70,23 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: true,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '768104824020-5lpm81riatt5kpqc8h5fsvfaf9duc9vh.apps.googleusercontent.com'
+            ),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+    [AuthenticationGuard],
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
+import {
+  GoogleLoginProvider,
+  SocialAuthService,
+  SocialUser,
+} from '@abacritt/angularx-social-login';
 
 @Component({
   selector: 'app-dialog-login',
@@ -9,6 +14,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./dialog-login.component.css'],
 })
 export class DialogLoginComponent implements OnInit {
+  public user: SocialUser = new SocialUser();
+
   loginForm = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl([
@@ -20,10 +27,16 @@ export class DialogLoginComponent implements OnInit {
 
   constructor(
     private authenicationService: AuthenticationService,
-    private router: Router
+    private router: Router,
+    private socialAuthService: SocialAuthService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.socialAuthService.authState.subscribe((user) => {
+      this.user = user;
+      console.log(user);
+    });
+  }
 
   login(): void {
     let username: any = this.loginForm.get('username')?.value;
@@ -31,5 +44,10 @@ export class DialogLoginComponent implements OnInit {
     this.authenicationService
       .login(username, password)
       .subscribe(() => this.router.navigateByUrl('cardpage'));
+  }
+  public loginWithGoogle(): void {
+    this.socialAuthService
+      .signIn(GoogleLoginProvider.PROVIDER_ID)
+      .then(() => this.router.navigate(['mainpage']));
   }
 }
